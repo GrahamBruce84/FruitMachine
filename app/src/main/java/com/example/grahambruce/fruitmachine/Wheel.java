@@ -13,7 +13,7 @@ public class Wheel {
     ArrayList<Symbol> barrel;
 
     public Wheel() {
-        this.barrel = new ArrayList<Symbol>();
+        barrel = new ArrayList<Symbol>();
         populate();
     }
 
@@ -33,6 +33,10 @@ public class Wheel {
 
     public void spin(){
         Collections.shuffle(barrel);
+    }
+
+    public Symbol getSpinResult(){
+        return barrel.get(0);
     }
 }
 

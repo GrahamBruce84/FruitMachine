@@ -1,6 +1,6 @@
 package com.example.grahambruce.fruitmachine;
 
-import java.util.Collections;
+import java.util.ArrayList;
 
 /**
  * Created by grahambruce on 30/06/2017.
@@ -9,22 +9,23 @@ import java.util.Collections;
 public class FruitMachine {
 
     Player player;
-    Wheel wheel1;
-    Wheel wheel2;
-    Wheel wheel3;
+    Wheel barrel1;
+    Wheel barrel2;
+    Wheel barrel3;
+    ArrayList<Symbol> spinResults;
 
-    public FruitMachine(Player player, Wheel wheel){
-        this.player = new Player;
-        this.wheel1 = new Wheel;
-        this.wheel2 = new Wheel;
-        this.wheel3 = new Wheel;
+    public FruitMachine(){
+        this.player = new Player(10);
+        this.barrel1 = new Wheel();
+        this.barrel2 = new Wheel();
+        this.barrel3 = new Wheel();
         spinWheels();
     }
 
     public void spinWheels(){
-        this.wheel1.spin();
-        this.wheel2.spin();
-        this.wheel3.spin();
+        this.barrel1.spin();
+        this.barrel2.spin();
+        this.barrel3.spin();
     }
 
 
