@@ -28,6 +28,4 @@ public class FruitMachine {
         this.barrel3.spin();
     }
 
-
-
 }

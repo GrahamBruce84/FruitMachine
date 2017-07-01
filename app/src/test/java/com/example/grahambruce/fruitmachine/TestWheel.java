@@ -3,6 +3,7 @@ package com.example.grahambruce.fruitmachine;
 import org.junit.Before;
 import org.junit.Test;
 
+import static com.example.grahambruce.fruitmachine.Symbol.BELL;
 import static junit.framework.Assert.assertEquals;
 
 /**
@@ -21,6 +22,12 @@ public class TestWheel {
     @Test
     public void testBarrelSize() throws Exception {
         assertEquals(8, wheel.getBarrelSize());
+    }
+
+    @Test
+    public void testGetSpinResult() throws Exception {
+        Wheel.spin();
+        assertEquals(BELL, Wheel.getSpinResult());
     }
 }
 
