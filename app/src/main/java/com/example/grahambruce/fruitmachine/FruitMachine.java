@@ -28,4 +28,14 @@ public class FruitMachine {
         this.barrel3.spin();
     }
 
+    public void getSpinResults(){
+        this.barrel1.getSpinResult();
+        this.barrel2.getSpinResult();
+        this.barrel3.getSpinResult();
+    }
+
+    public void getCredits(){
+
+    }
+
 }

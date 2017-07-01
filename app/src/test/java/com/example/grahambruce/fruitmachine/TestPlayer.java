@@ -23,4 +23,10 @@ public class TestPlayer {
         assertEquals(10, player.getMoney());
 
     }
+
+    @Test
+    public void testPutMoneyIn() throws Exception {
+        player.getMoney();
+        assertEquals(9, player.putMoneyIn());
+    }
 }

@@ -15,4 +15,8 @@ public class Player {
     public int getMoney() {
         return money;
     }
+
+    public int putMoneyIn(){
+        return money -= 1;
+    }
 }
