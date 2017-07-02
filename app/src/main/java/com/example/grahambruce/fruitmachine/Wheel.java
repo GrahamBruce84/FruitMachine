@@ -10,10 +10,10 @@ import java.util.Collections;
 public class Wheel {
 
     Symbol symbol;
-    static ArrayList<Symbol> barrel;
+    static ArrayList<Symbol> Wheel;
 
     public Wheel() {
-        barrel = new ArrayList<Symbol>();
+        Wheel = new ArrayList<>();
         populate();
     }
 
@@ -23,20 +23,20 @@ public class Wheel {
 
     public void populate() {
         for (Symbol symbol : Symbol.values()) {
-            barrel.add(symbol);
+            Wheel.add(symbol);
         }
     }
 
-    public int getBarrelSize(){
-        return barrel.size();
+    public int getWheelSize(){
+        return Wheel.size();
     }
 
     public static void spin(){
-        Collections.shuffle(barrel);
+        Collections.shuffle(Wheel);
     }
 
     public static Symbol getSpinResult(){
-        return barrel.get(0);
+        return Wheel.get(0);
     }
 }
 

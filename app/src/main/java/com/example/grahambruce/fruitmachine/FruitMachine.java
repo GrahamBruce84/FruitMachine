@@ -1,6 +1,11 @@
 package com.example.grahambruce.fruitmachine;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+
+import static android.R.id.list;
+import static com.example.grahambruce.fruitmachine.Wheel.getSpinResult;
+import static com.example.grahambruce.fruitmachine.Wheel.spin;
 
 /**
  * Created by grahambruce on 30/06/2017.
@@ -8,34 +13,31 @@ import java.util.ArrayList;
 
 public class FruitMachine {
 
-    Player player;
-    Wheel barrel1;
-    Wheel barrel2;
-    Wheel barrel3;
-    ArrayList<Symbol> spinResults;
+    private Player player;
+    private Wheel wheel1;
+    private Wheel wheel2;
+    private Wheel wheel3;
+    private ArrayList<Wheel> wheels;
 
-    public FruitMachine(){
+    public FruitMachine() {
         this.player = new Player(10);
-        this.barrel1 = new Wheel();
-        this.barrel2 = new Wheel();
-        this.barrel3 = new Wheel();
-        spinWheels();
-    }
-
-    public void spinWheels(){
-        this.barrel1.spin();
-        this.barrel2.spin();
-        this.barrel3.spin();
-    }
-
-    public void getSpinResults(){
-        this.barrel1.getSpinResult();
-        this.barrel2.getSpinResult();
-        this.barrel3.getSpinResult();
-    }
-
-    public void getCredits(){
+        this.wheel1 = new Wheel();
+        this.wheel2 = new Wheel();
+        this.wheel3 = new Wheel();
+        this.wheels = new ArrayList<>(Arrays.asList(wheel1, wheel2, wheel3));
 
     }
 
+    public void spinWheels() {
+        for (Wheel wheel : wheels) {
+            spin();
+        }
+    }
+
+    public Symbol getSpinResults() {
+        for (Wheel wheel : wheels) {
+            getSpinResult();
+        }
+        return getSpinResults();
+    }
 }

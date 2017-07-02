@@ -20,8 +20,8 @@ public class TestWheel {
     }
 
     @Test
-    public void testBarrelSize() throws Exception {
-        assertEquals(8, wheel.getBarrelSize());
+    public void testWheelSize() throws Exception {
+        assertEquals(8, wheel.getWheelSize());
     }
 
     @Test
