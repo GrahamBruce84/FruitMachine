@@ -4,7 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static com.example.grahambruce.fruitmachine.Symbol.BELL;
-import static junit.framework.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 /**
  * Created by grahambruce on 30/06/2017.

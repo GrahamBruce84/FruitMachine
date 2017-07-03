@@ -7,7 +7,7 @@ import org.mockito.*;
 import static com.example.grahambruce.fruitmachine.Symbol.SEVEN;
 import static org.mockito.Mockito.*;
 
-import static junit.framework.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 /**
  * Created by grahambruce on 30/06/2017.
@@ -22,15 +22,11 @@ public class TestFruitMachine {
     @Before
     public void before(){
         wheel = new Wheel();
+        fruitMachine = new FruitMachine();
     }
 
     @Test
     public void testGetSpinResults() throws Exception {
-        fruitMachine.spinWheels();
         assertEquals(SEVEN, fruitMachine.getSpinResults());
     }
-
-
-
-
 }

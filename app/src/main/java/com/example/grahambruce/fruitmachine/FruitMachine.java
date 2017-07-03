@@ -18,6 +18,8 @@ public class FruitMachine {
     private Wheel wheel2;
     private Wheel wheel3;
     private ArrayList<Wheel> wheels;
+    private int money;
+    private Symbol symbol;
 
     public FruitMachine() {
         this.player = new Player(10);
@@ -25,19 +27,30 @@ public class FruitMachine {
         this.wheel2 = new Wheel();
         this.wheel3 = new Wheel();
         this.wheels = new ArrayList<>(Arrays.asList(wheel1, wheel2, wheel3));
-
+        this.money = money;
     }
 
-    public void spinWheels() {
-        for (Wheel wheel : wheels) {
-            spin();
-        }
+    public int getMoney() {
+        return money;
     }
 
-    public Symbol getSpinResults() {
-        for (Wheel wheel : wheels) {
-            getSpinResult();
+    public void jackpot(){
+         money += 1;
+    }
+
+    public ArrayList<Symbol> getSpinResults(){
+        ArrayList<Symbol> resultList = new ArrayList<Symbol>();
+        for (Wheel wheel : wheels){
+            resultList.add(wheel.getSpinResult());
         }
-        return getSpinResults();
+        return resultList;
+    }
+
+    public int checkForWin() {
+        for(Wheel wheel : wheels){
+            if (wheel1 == wheel2 && wheel1 == wheel3){
+                return Symbol.getValues();
+            }
+        }
     }
 }
